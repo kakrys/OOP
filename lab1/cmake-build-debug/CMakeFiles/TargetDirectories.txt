@@ -1,0 +1,3 @@
+C:/Users/vadya/OneDrive/Рабочий стол/ООП/lab1/cmake-build-debug/CMakeFiles/lab1.dir
+C:/Users/vadya/OneDrive/Рабочий стол/ООП/lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/vadya/OneDrive/Рабочий стол/ООП/lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
