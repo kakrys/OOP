@@ -1,9 +1,5 @@
-//
-// Created by vadya on 11.12.2023.
-//
-
-#ifndef LAB3_ARR3D_H
-#define LAB3_ARR3D_H
+#ifndef __ARRAY3D_H__
+#define __ARRAY3D_H__
 
 #include <iostream>
 #include <vector>
@@ -22,6 +18,13 @@ public:
     {
         return data[i * dim1 * dim2 + j * dim2 + k];
     }
+
+    static Array3d<T> fill(int dim0, int dim1, int dim2, T value);
+
+    static Array3d<T> zeros(int dim0, int dim1, int dim2);
+
+    static Array3d<T> ones(int dim0, int dim1, int dim2);
+
 
     std::vector<T> GetValues0(int i) const;
 
@@ -46,7 +49,9 @@ public:
     void SetValues02(int i, int k, const std::vector<std::vector<T>>& arr);
 
     void SetValues12(int j, int k, const std::vector<std::vector<T>>& arr);
+
 };
+
 
 template<typename T>
 std::vector<T> Array3d<T>::GetValues0(int i)  const
@@ -189,7 +194,7 @@ void Array3d<T>::SetValues12(int j, int k, const std::vector<std::vector<T>>& ar
 
 
 template<typename T>
-Array3d<T> ones(int dim0, int dim1, int dim2)
+Array3d<T> Array3d<T>::ones(int dim0, int dim1, int dim2)
 {
     Array3d<T> arr(dim0, dim1, dim2);
     T one = static_cast<T>(1);
@@ -208,7 +213,7 @@ Array3d<T> ones(int dim0, int dim1, int dim2)
 
 
 template<typename T>
-Array3d<T> zeros(int dim0, int dim1, int dim2)
+Array3d<T> Array3d<T>::zeros(int dim0, int dim1, int dim2)
 {
     Array3d<T> arr(dim0, dim1, dim2);
     T zero = static_cast<T>(0);
@@ -226,7 +231,7 @@ Array3d<T> zeros(int dim0, int dim1, int dim2)
 }
 
 template<typename T>
-Array3d<T> fill(int dim0, int dim1, int dim2, T value)
+Array3d<T> Array3d<T>::fill(int dim0, int dim1, int dim2, T value)
 {
     Array3d<T> arr(dim0, dim1, dim2);
     for (int i = 0; i < dim0; i++)
@@ -242,5 +247,4 @@ Array3d<T> fill(int dim0, int dim1, int dim2, T value)
     return arr;
 }
 
-
-#endif //LAB3_ARR3D_H
+#endif

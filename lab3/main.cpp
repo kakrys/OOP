@@ -16,9 +16,9 @@ int main()
     }
     std::cout << '\n' << '\n';
 
-    Array3d<double> ones_arr = ones<double>(2, 2, 2);
-    Array3d<float> zeros_arr = zeros<float>(2, 2, 2);
-    Array3d<int> fill_arr = fill<int>(2, 2, 2, 45);
+    Array3d<int> ones_arr = Array3d<int>::ones(2, 2, 2);
+    Array3d<int> zeros_arr = Array3d<int>::zeros(2, 2, 2);
+    Array3d<int> fill_arr = Array3d<int>::fill(2,2,2,45);
 
     std::vector mas1 = ones_arr.GetValues01(0,0);
     for (int i = 0; i < mas1.size(); i++)
