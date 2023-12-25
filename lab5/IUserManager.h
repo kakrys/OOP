@@ -1,21 +1,13 @@
-//
-// Created by vadya on 17.12.2023.
-//
-
-#ifndef LAB5_IUSERMANAGER_H
-#define LAB5_IUSERMANAGER_H
-
 #pragma once
-
-#include <combaseapi.h>
 #include "User.h"
+#include<string>
 
-interface IUserManager
-        {
-                public:
-                void signIn(User& user);
-                void signOut(User& user);
-                bool isAuthorized();
-        };
-
-#endif //LAB5_IUSERMANAGER_H
+class IUserManager
+{
+public:
+	virtual void signIn(User user) = 0;
+	virtual void signOut() = 0;
+	virtual bool isAuthorized() = 0;
+	virtual bool isRegistered(User user) = 0;
+	virtual void signUp(std::string name, std::string login, std::string password) = 0;
+};
